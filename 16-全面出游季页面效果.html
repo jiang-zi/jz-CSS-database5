@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            /* 让html,body的高度和视口一样高 */
+            height: 100%;
+        }
+
+        .travel {
+            height: 100%;
+            background: url(./images/f1_1.jpg) center 0;
+            background-size: cover;
+        }
+
+        .yun img {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            animation: yun 1s infinite alternate linear;
+        }
+
+        .yun img:nth-child(1) {
+            margin-left: -200px;
+            margin-top: 50px;
+        }
+
+        .yun img:nth-child(2) {
+            margin-left: 400px;
+            margin-top: 100px;
+            /* 动画延迟 动画等多久才播放*/
+            animation-delay: 0.2s;
+        }
+
+        .yun img:nth-child(3) {
+            margin-left: -450px;
+            margin-top: 220px;
+            /* 动画延迟 */
+            animation-delay: 0.4s;
+        }
+
+        @keyframes yun {
+            0% {
+                transform: translate(-50%);
+            }
+
+            100% {
+                transform: translate(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="travel">
+        <!-- 云 -->
+        <div class="yun">
+            <img src="./images/yun1.png" alt="">
+            <img src="./images/yun2.png" alt="">
+            <img src="./images/yun3.png" alt="">
+        </div>
+        <!-- 气球 -->
+        <div class="qiqiu">
+            <img src="./images/san.png" alt="">
+        </div>
+        <!-- 长颈鹿 -->
+        <!-- <div class="lu">
+            <img src="./images/lu.png" alt="">
+        </div> -->
+        <!-- 文字 -->
+        <!-- <div class="txt">
+            <img src="./images/font1.png" alt="">
+        </div> -->
+        <!-- 小箭头 -->
+        <!-- <div class="arrow">
+            <img src="./images/1.png" alt="">
+            <img src="./images/2.png" alt="">
+            <img src="./images/3.png" alt="">
+            <img src="./images/4.png" alt="">
+        </div> -->
+    </div>
+</body>
+
+</html>

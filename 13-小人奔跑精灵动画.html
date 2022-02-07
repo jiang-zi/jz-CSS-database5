@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 盒子大小是图片的宽度/小图片的数量 */
+            width: 140px;
+            height: 140px;
+            border: 1px solid #000;
+            background: url(./images/bg.png) 0 0;
+            /* 精灵动画 steps(小图片的数量) */
+            animation: run 1s infinite steps(12);
+        }
+
+        @keyframes run {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                /* 背景定位移动的距离是图片的宽度 */
+                background-position: -1680px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

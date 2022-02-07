@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+            text-align: center;
+        }
+
+        img {
+            margin-top: 50px;
+        }
+
+        body img {
+            transition: all 1s;
+        }
+
+        body img:nth-child(1):hover {
+            transform: rotateZ(60deg);
+        }
+
+        body img:nth-child(2):hover {
+            transform: rotateX(60deg);
+        }
+
+        body img:nth-child(3):hover {
+            transform: rotateY(60deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./images/hero.jpeg" alt="">
+    <img src="./images/hero.jpeg" alt="">
+    <img src="./images/hero.jpeg" alt="">
+</body>
+
+</html>

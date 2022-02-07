@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            border-radius: 50%;
+            /* 调用动画的名称 */
+            animation-name: move;
+            /* 动画播放的时长 */
+            animation-duration: 500ms;
+            /* 动画延迟 动画等多久才执行 */
+            animation-delay: 1s;
+            /* 动画执行完毕的状态 forwards 停在最后一帧(结束状态) */
+            animation-fill-mode: forwards;
+            /*速度曲线 linear 匀速 */
+            animation-timing-function: linear;
+            /* 播放次数 infinite 循环播放*/
+            animation-iteration-count: infinite;
+            /* 动画播放方向 alternate 逆播(反向播放) */
+            animation-direction: alternate;
+        }
+
+        /* 1.定义动画 */
+        @keyframes move {
+            from {
+                transform: translate(0);
+            }
+
+            to {
+                transform: translate(500px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

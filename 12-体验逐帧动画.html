@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页时钟</title>
+    <style>
+        .clock {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 8px solid #000;
+            margin: 150px auto;
+            border-radius: 50%;
+        }
+
+        .line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 2px;
+            height: 100%;
+            background-color: #ccc;
+        }
+
+        .clock .line:nth-child(2) {
+            transform: rotate(30deg);
+        }
+
+        .clock .line:nth-child(3) {
+            transform: rotate(60deg);
+        }
+
+        .clock .line:nth-child(4) {
+            transform: rotate(90deg);
+        }
+
+        .clock .line:nth-child(5) {
+            transform: rotate(120deg);
+        }
+
+        .clock .line:nth-child(6) {
+            transform: rotate(150deg);
+        }
+
+        .mask {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 150px;
+            height: 150px;
+            background: #fff;
+            border-radius: 50%;
+
+        }
+
+        .hour {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 50%;
+            margin: auto;
+            width: 6px;
+            height: 40px;
+            background: #000;
+            transform-origin: bottom center;
+            transform: rotate(50deg);
+        }
+
+        .minute {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 50%;
+            margin: auto;
+            width: 3px;
+            height: 50px;
+            background: #000;
+            transform-origin: bottom center;
+            transform: rotate(90deg);
+        }
+
+        .second {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 50%;
+            margin: auto;
+            width: 2px;
+            height: 70px;
+            background: #f00;
+            transform-origin: bottom center;
+            transform: rotate(225deg);
+            /* 补间动画 */
+            animation: second 60s infinite;
+            /* 逐帧动画 steps() 动画步长,动画分成多少份执行 */
+            animation: second 60s infinite steps(60);
+        }
+
+        @keyframes second {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .dotted {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 12px;
+            height: 12px;
+            background: #000;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <!-- 刻度线 -->
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+
+        <!-- 遮罩层 -->
+        <div class="mask"></div>
+
+        <!-- 表针 -->
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+
+        <!-- 螺丝 -->
+        <div class="dotted"></div>
+    </div>
+</body>
+
+</html>

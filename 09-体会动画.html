@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 动画和过渡的区别
+        1.过渡需要触发条件,动画不需要
+        2.过渡只有2个状态,动画多个状态
+        3.过渡只能播放一次,动画循环播放 */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            border-radius: 50%;
+            /* 调用动画 */
+            animation: move 1s infinite;
+        }
+
+        /* 1.定义动画 */
+        @keyframes move {
+            from {
+                transform: translate(0);
+            }
+
+            to {
+                transform: translate(500px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

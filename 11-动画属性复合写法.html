@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            border-radius: 50%;
+            /* 动画属性复合写法 */
+            /* 1.动画名称和时长必须写,其他的不写取默认值 
+               2.出现2个时间,前边的是时长,后边的延迟
+            */
+            animation: move 1s 1s infinite alternate linear;
+        }
+
+        /* 1.定义动画 */
+        @keyframes move {
+            from {
+                transform: translate(0);
+            }
+
+            to {
+                transform: translate(500px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
